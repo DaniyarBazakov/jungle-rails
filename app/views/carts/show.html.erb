@@ -34,13 +34,14 @@
               TOTAL:
             </th>
             <th>
-              <%= cart_subtotal_cents / 100.0 %>
+              <%= humanized_money_with_symbol(Money.new(cart_subtotal_cents)) %>
             </th>
           </tr>
         </tfoot>
       </table>
     </div>
  <% end %>
+
 
 
   <div class="row">
