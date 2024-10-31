@@ -1,0 +1,17 @@
+<h1>All Categories</h1>
+<%= link_to 'New Category', new_admin_category_path, class: 'btn btn-primary' %>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @categories.each do |category| %>
+      <tr>
+        <td><%= category.name %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
